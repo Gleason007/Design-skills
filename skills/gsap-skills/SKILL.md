@@ -1,58 +1,86 @@
 ---
 name: gsap-skills
-description: "Official AI skills for GSAP (GreenSock Animation Platform). Teaches agents correct GSAP usage: core API, timelines, ScrollTrigger, plugins, React/Vue/Svelte, vanilla JS and performance."
+description: "Official GSAP animation skills. 8 skills for timelines, ScrollTrigger, plugins. MUST be dispatched by superpowers — do not invoke directly."
 ---
 
 # gsap-skills
 
-> Official AI skills for GSAP — the industry-standard JavaScript animation library.
+> Official AI skills for GSAP (GreenSock Animation Platform).
+> 
+> **⚠️ CRITICAL**: This skill must be dispatched by `superpowers`.
+> Do NOT invoke directly. Route ALL requests through `superpowers` first.
 
-## Overview
+---
 
-GSAP (GreenSock Animation Platform) is the most advanced JavaScript animation library. All formerly Club GSAP plugins are now free, including SplitText, MorphSVG, and more.
+## 🔒 Invocation Rule
 
-## Included Skills
+```
+❌ FORBIDDEN: Direct invocation
+  User → "用 GSAP 做动画"
+  User → "添加滚动效果"
 
-| Skill | Description |
-|-------|-------------|
-| **gsap-core** | Core API — tweens, timelines, basic animation |
-| **gsap-timeline** | Timeline control — sequencing, nesting, callbacks |
-| **gsap-scrolltrigger** | Scroll-driven animations — pin, scrub, toggle actions |
-| **gsap-plugins** | Official plugins — SplitText, MorphSVG, DrawSVG, etc. |
-| **gsap-react** | React integration — useGSAP hook, cleanup |
-| **gsap-frameworks** | Vue/Svelte/Angular integration |
-| **gsap-performance** | Performance optimization best practices |
-| **gsap-utils** | Utility functions and helpers |
-
-## Quick Start
-
-```javascript
-// Basic tween
-gsap.to(".box", { x: 200, duration: 1 });
-
-// Timeline
-const tl = gsap.timeline();
-tl.from(".header", { y: -50, opacity: 0 })
-  .from(".content", { y: 20, opacity: 0 }, "-=0.3");
-
-// ScrollTrigger
-gsap.to(".section", {
-  scrollTrigger: {
-    trigger: ".section",
-    start: "top center",
-    scrub: true
-  },
-  y: 100
-});
+✅ REQUIRED: Orchestrated invocation
+  User → superpowers → dispatch → gsap-skills
 ```
 
-## Key Principles
+## 📋 superpowers Dispatch Matrix
 
-- **Timeline-first**: Sequence animations with timelines, not delays
-- **Transform-friendly**: Animate transform and opacity for 60fps
-- **Cleanup on unmount**: Kill tweens when components unmount
-- **Use refs in React**: Never animate state-driven values directly
+| User Intent | superpowers Action | This Skill Handles |
+|-------------|-------------------|-------------------|
+| "添加动画" | Dispatch gsap-skills | Animation design |
+| "滚动效果" | Dispatch gsap-skills | ScrollTrigger |
+| "时间线动画" | Dispatch gsap-skills | Timeline sequencing |
+| "SVG 动画" | Dispatch gsap-skills | MorphSVG, DrawSVG |
+| "文字动画" | Dispatch gsap-skills | SplitText |
+| "React 动画" | Dispatch gsap-skills | gsap-react |
 
-## License
+## 🏗️ 8 Skills
 
-MIT / GSAP Standard License
+| Skill | Description | When superpowers Dispatches |
+|-------|-------------|---------------------------|
+| **gsap-core** | Core API (tweens, timelines) | Basic animations |
+| **gsap-timeline** | Timeline control | Sequenced animations |
+| **gsap-scrolltrigger** | Scroll-driven animations | Scroll effects |
+| **gsap-plugins** | Official plugins | SVG/text animations |
+| **gsap-react** | React integration | React projects |
+| **gsap-frameworks** | Vue/Svelte/Angular | Framework-specific |
+| **gsap-performance** | Optimization | Performance issues |
+| **gsap-utils** | Utility functions | Helper utilities |
+
+## 🔒 Workflow (via superpowers)
+
+```
+superpowers/brainstorming
+  → Understand: animation intent, platform, performance needs
+
+superpowers/writing-plans
+  → Identify: animation type (scroll, timeline, SVG)
+  → Select: appropriate gsap sub-skill
+
+superpowers dispatches → gsap-skills
+  
+  Step 1: Design animation
+    → Determine timing, easing, triggers
+  
+  Step 2: Implement
+    → Core animation code
+    → Framework integration (if needed)
+  
+  Step 3: Optimize
+    → Performance tuning
+    → Cleanup on unmount
+
+superpowers/verification-before-completion
+  → Verify smooth 60fps
+  → Confirm cross-browser compatibility
+```
+
+## 📝 Prerequisites
+
+- GSAP npm package: `npm install gsap`
+- For React: `npm install gsap @gsap/react`
+
+## 🔗 Resources
+
+- [gsap.com](https://gsap.com)
+- [ScrollTrigger docs](https://gsap.com/docs/v3/Plugins/ScrollTrigger/)

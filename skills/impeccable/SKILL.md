@@ -1,53 +1,93 @@
 ---
 name: impeccable
-description: "Design guidance for AI coding agents. 1 skill, 23 commands, live browser iteration, and 41 deterministic detector rules for AI-generated frontend design. Stops AI from producing generic-looking UIs."
+description: "Design quality enforcement for AI-generated UIs. 23 commands + 41 detection rules. MUST be dispatched by superpowers — do not invoke directly."
 ---
 
 # impeccable
 
-> Design quality enforcement for AI-generated UIs.
+> Design quality engine — stops AI from producing generic-looking UIs.
+> 
+> **⚠️ CRITICAL**: This skill must be dispatched by `superpowers`.
+> Do NOT invoke directly. Route ALL requests through `superpowers` first.
 
-## Overview
+---
 
-impeccable adds design judgment to AI agents. It stops generic AI patterns — purple gradients, nested cards, gray-on-color text — and enforces real design craft.
+## 🔒 Invocation Rule
 
-## Commands (23)
+```
+❌ FORBIDDEN: Direct invocation
+  User → /impeccable critique
+  User → /impeccable audit
 
-| Command | Purpose |
-|---------|---------|
-| `/impeccable init` | Write PRODUCT.md + DESIGN.md |
-| `/impeccable craft` | Full shape-then-build flow |
-| `/impeccable critique` | UX design review |
-| `/impeccable audit` | Technical quality (a11y, perf, responsive) |
-| `/impeccable polish` | Final pass, design system alignment |
-| `/impeccable bolder` | Amplify boring designs |
-| `/impeccable quieter` | Tone down overly bold designs |
-| `/impeccable animate` | Add purposeful motion |
-| `/impeccable colorize` | Introduce strategic color |
-| `/impeccable typeset` | Fix font choices, hierarchy |
+✅ REQUIRED: Orchestrated invocation
+  User → superpowers → dispatch → impeccable
+```
 
-## 41 Detector Rules
+## 📋 superpowers Dispatch Matrix
 
-Automatic detection of AI design anti-patterns:
+| User Intent | superpowers Action | This Skill Handles |
+|-------------|-------------------|-------------------|
+| "帮我审核设计" | Dispatch impeccable | critique + audit |
+| "看看设计质量" | Dispatch impeccable | audit (41 rules) |
+| "优化一下设计" | Dispatch impeccable | polish + bolder/quieter |
+| "初始化项目" | Dispatch impeccable | init (PRODUCT.md + DESIGN.md) |
+| "添加动效" | Dispatch impeccable → taste-skill | animate (impeccable) + enhance (taste-skill) |
+| "配色不对" | Dispatch impeccable | colorize + typeset |
+
+## 🎯 23 Commands
+
+| Command | Purpose | superpowers Triggers When |
+|---------|---------|---------------------------|
+| `/impeccable init` | Initialize project (PRODUCT.md + DESIGN.md) | User starts new project |
+| `/impeccable craft` | Full shape-then-build flow | User wants complete design |
+| `/impeccable critique` | UX design review (hierarchy, clarity) | User asks for design review |
+| `/impeccable audit` | Technical quality (a11y, perf, responsive) | User asks for quality check |
+| `/impeccable polish` | Final pass, design system alignment | Before shipping |
+| `/impeccable bolder` | Amplify boring designs | Design looks too plain |
+| `/impeccable quieter` | Tone down overly bold designs | Design too loud |
+| `/impeccable animate` | Add purposeful motion | User mentions animation |
+| `/impeccable colorize` | Strategic color introduction | Color issues |
+| `/impeccable typeset` | Fix font choices, hierarchy | Typography issues |
+
+## 🛡️ 41 Detection Rules
+
+Auto-detects AI design anti-patterns:
 - ❌ Purple-to-blue gradients
 - ❌ Cards nested in cards
 - ❌ Gray text on colored backgrounds
 - ❌ Inter for everything
 - ❌ Rounded-square icon tiles above every heading
 
-## Usage
+## 🔒 Workflow (via superpowers)
 
-```bash
-# Initialize project
-/impeccable init
+```
+superpowers/brainstorming
+  → Identify: user wants design quality review
+  → Plan: dispatch impeccable
 
-# Audit current design
-/impeccable audit
+superpowers dispatches → impeccable
+  
+  Step 1: critique (UX review)
+    → Hierarchy, clarity, emotional resonance
+  
+  Step 2: audit (technical)
+    → Accessibility, performance, responsive
+  
+  Step 3: polish (if needed)
+    → Design system alignment
+    → Final pass
 
-# Polish before shipping
-/impeccable polish
+superpowers/verification-before-completion
+  → Confirm quality meets standards
+  → Present findings to user
 ```
 
-## License
+## 📝 Prerequisites
 
-MIT
+- Project initialized with `/impeccable init`
+- Browser extension (optional, for live iteration)
+
+## 🔗 Resources
+
+- [impeccable.style](https://impeccable.style)
+- [Frontend design skill](https://github.com/anthropics/skills/tree/main/skills/frontend-design)

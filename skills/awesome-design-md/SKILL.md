@@ -1,45 +1,89 @@
 ---
 name: awesome-design-md
-description: "A curated collection of 73+ real-world DESIGN.md templates from companies like Airbnb, Apple, Stripe, Notion, and more. Use these to bootstrap your own design system or reference established design languages."
+description: "73+ real-world DESIGN.md templates from companies. MUST be dispatched by superpowers — do not invoke directly."
 ---
 
 # awesome-design-md
 
-> 73+ real-world DESIGN.md templates extracted from actual websites.
+> 73+ real-world DESIGN.md templates from actual websites.
+> 
+> **⚠️ CRITICAL**: This skill must be dispatched by `superpowers`.
+> Do NOT invoke directly. Route ALL requests through `superpowers` first.
 
-## Overview
+---
 
-Copy a DESIGN.md into your project, tell your AI agent "build me a page that looks like this," and generate high-quality UI that stays visually consistent with the design language.
+## 🔒 Invocation Rule
 
-## Included Design Systems
+```
+❌ FORBIDDEN: Direct invocation
+  User → "参考 Airbnb 的设计"
+  User → "给我 Apple 的 DESIGN.md"
 
-- **Tech**: Apple, Stripe, Linear, Notion, Figma, Vercel, Shopify
-- **Lifestyle**: Airbnb, Nike, Starbucks, Spotify
-- **Automotive**: BMW, Ferrari, Lamborghini, Tesla
-- **Finance**: Binance, Coinbase, Mastercard, Revolut
-- **Gaming**: PlayStation, Nintendo
-- **And 60+ more...**
+✅ REQUIRED: Orchestrated invocation
+  User → superpowers → dispatch → awesome-design-md
+```
 
-## Usage
+## 📋 superpowers Dispatch Matrix
+
+| User Intent | superpowers Action | This Skill Handles |
+|-------------|-------------------|-------------------|
+| "参考 Airbnb" | Dispatch awesome-design-md | Copy Airbnb DESIGN.md |
+| "类似 Apple 风格" | Dispatch awesome-design-md | Copy Apple DESIGN.md |
+| "Stripe 风格" | Dispatch awesome-design-md | Copy Stripe DESIGN.md |
+| "设计参考" | Dispatch awesome-design-md | Select from 73+ options |
+
+## 🏗️ Included Design Systems (部分)
+
+| Company | Category | When superpowers Dispatches |
+|---------|---------|---------------------------|
+| Airbnb | Travel | "参考 Airbnb" |
+| Apple | Tech | "类似 Apple" |
+| Stripe | Finance | "Stripe 风格" |
+| Notion | Productivity | "Notion 风格" |
+| Shopify | E-commerce | "Shopify 风格" |
+| BMW | Automotive | "类似 BMW" |
+| PlayStation | Gaming | "PlayStation 风格" |
+| ... | ... | ... |
+
+**73+ total** — see `design-md/` directory.
+
+## 🔒 Workflow (via superpowers)
+
+```
+superpowers/brainstorming
+  → Understand: user's reference intent
+  → Match: closest design system
+
+superpowers/writing-plans
+  → Select: appropriate DESIGN.md
+  → Context: provide to user or other skills
+
+superpowers dispatches → awesome-design-md
+  
+  Step 1: Select reference
+    → Match user intent to available systems
+  
+  Step 2: Copy DESIGN.md
+    → Provide as context
+
+superpowers (optional)
+  → Pass to ui-ux-pro-max-skill for design generation
+  → Pass to taste-skill for enhancement
+```
+
+## 📝 Usage
 
 ```bash
-# Reference a specific design system
+# Reference specific system
 cp design-md/stripe/DESIGN.md ./DESIGN.md
 
-# Or let your AI agent pick the right one
+# Or let superpowers auto-select
 ```
 
-## Structure
+## 📝 Prerequisites
 
-```
-design-md/
-├── airbnb/DESIGN.md
-├── apple/DESIGN.md
-├── stripe/DESIGN.md
-├── notion/DESIGN.md
-├── ... (73+ more)
-```
+- User's intent (what design they want to reference)
 
-## License
+## 🔗 Resources
 
-MIT
+- [VoltAgent](https://github.com/VoltAgent/awesome-design-md)

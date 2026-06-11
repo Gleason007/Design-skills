@@ -1,141 +1,214 @@
-# Design Skills for Antigravity / Google Gemini
+---
+name: design-skills
+description: "Design Skills for Antigravity — 7 curated design skills orchestrated by superpowers. DO NOT use individual skills directly; always invoke through superpowers."
+---
 
-> Antigravity / Google Gemini 配置：自动加载团队设计 skills。
+# Design Skills — Antigravity Orchestration Guide
+
+> **WARNING**: This skill is managed by `superpowers` (the orchestrator).
+> **DO NOT** invoke any sub-skill directly. Route ALL requests through `superpowers` first.
 
 ---
 
-## 🚀 快速开始
-
-当用户在 Antigravity 或 Google Gemini CLI 中打开这个仓库时，
-自动读取此配置，加载所有 skills。
-
----
-
-## 📦 已安装的 7 个 Skills
-
-| # | Skill | 🎯 核心能力 |
-|---|-------|-----------|
-| 1 | **mcp-server-guide** | Figma 官方 MCP（9 skills） |
-| 2 | **impeccable** | 设计质量审核（23 命令 + 41 规则） |
-| 3 | **ui-ux-pro-max-skill** | UI/UX 设计引擎（161 推理规则） |
-| 4 | **awesome-design-md** | 73+ 真实网站 DESIGN.md |
-| 5 | **gsap-skills** | GSAP 动画库 |
-| 6 | **taste-skill** | 反"slop"设计提升 |
-| 7 | **superpowers** | 软件开发方法论（14 skills） |
-
----
-
-## ⚙️ 自动配置指令
-
-### 会话启动时自动执行
+## ⚡ CRITICAL: superpowers-first rule
 
 ```
-1. 扫描 skills/ 目录，读取所有 SKILL.md
-2. 确认 7 个 skills 已就绪
-3. 检查 Figma MCP Server 连接状态（如适用）
-4. 就绪提示
-```
-
----
-
-## 🛠️ 核心能力速查
-
-### 设计质量
-```
-impeccable init     → 初始化项目
-impeccable critique → UX 审查
-impeccable audit    → 技术质量检查
-impeccable polish   → 最终润色
-```
-
-### 设计系统
-```
-ui-ux-pro-max-skill → 生成设计系统
-awesome-design-md   → 选择设计参考
-taste-skill         → 提升设计品质
-```
-
-### Figma 集成
-```
-mcp-server-guide    → Figma MCP 连接
-figma-code-connect  → 组件 ↔ 代码映射
-figma-generate-design → 代码 → Figma
-```
-
-### 动画
-```
-gsap-skills         → GSAP 动画
-```
-
-### 开发流程
-```
-superpowers/brainstorming     → 需求探索
-superpowers/writing-plans     → 编写计划
-superpowers/executing-plans   → 执行计划
+User request
+      │
+      ▼
+┌──────────────────────┐
+│  1. superpowers      │  ← ALWAYS FIRST
+│     - analyze        │
+│     - plan           │
+│     - dispatch       │
+└──────────┬───────────┘
+           │
+     ┌─────┴─────┐
+     ▼           ▼
+┌──────────┐  ┌──────────┐
+│ figma    │  │ design   │
+│ MCP      │  │ system   │
+└──────────┘  └──────────┘
+     │           │
+     └─────┬─────┘
+           ▼
+┌──────────────────────┐
+│  2. superpowers      │
+│     - verify         │
+│     - complete       │
+└──────────────────────┘
 ```
 
 ---
 
-## 🎬 推荐工作流
+## 🗂️ 技能调用矩阵（superpowers 使用）
 
-### 场景 1: 代码 → Figma
+| # | Sub-Skill | What It Does | When superpowers Dispatches It |
+|---|-----------|--------------|-------------------------------|
+| 1 | **mcp-server-guide** | Figma MCP — read/write designs, generate code, build libraries | User mentions Figma, design files, component sync, or "push to Figma" |
+| 2 | **impeccable** | Quality audit — 23 commands + 41 detection rules | User mentions review, audit, quality check, or polish |
+| 3 | **ui-ux-pro-max-skill** | Design system generation — 161 reasoning rules, 67 styles | User mentions design system, theme, generate components, or "create a design" |
+| 4 | **awesome-design-md** | Reference library — 73+ real-world DESIGN.md templates | User mentions "like Airbnb", "similar to Stripe", or wants design reference |
+| 5 | **gsap-skills** | Animation — timelines, ScrollTrigger, plugins | User mentions animation, motion, transition, or "add animation" |
+| 6 | **taste-skill** | Anti-slop design enhancement — layout, typography, spacing | User mentions "looks cheap", "improve design", or "make it look better" |
+| 7 | **superpowers** *(self)* | Orchestration — brainstorming, planning, execution, verification | Every task starts and ends here |
+
+---
+
+## 🔒 Mandatory Workflow
+
+### Step 1: RECEIVE (superpowers)
+
+Receive the user's request. Do NOT act yet.
+
+**Action**: `superpowers/brainstorming`
+- Understand the intent
+- Identify the domain (Figma, design, animation, audit, etc.)
+- Determine which sub-skills are needed
+
+### Step 2: PLAN (superpowers)
+
+**Action**: `superpowers/writing-plans`
+- Break into sub-tasks
+- Map each sub-task to a skill from the matrix above
+- Define expected outputs
+
+### Step 3: DISPATCH (superpowers → sub-skill)
+
+**Action**: Call the specific sub-skill
+- Pass the context from planning
+- Execute the task
+- Collect results
+
+**Allowed dispatch targets** (based on user intent):
+- Figma operations → `mcp-server-guide`
+- Design system creation → `ui-ux-pro-max-skill`
+- Animation → `gsap-skills`
+- Quality review → `impeccable`
+- Design reference → `awesome-design-md`
+- Design enhancement → `taste-skill`
+
+### Step 4: VERIFY (superpowers)
+
+**Action**: `superpowers/verification-before-completion`
+- Check if results meet user requirements
+- Validate design quality (if applicable)
+- Ensure all sub-tasks completed
+
+### Step 5: COMPLETE (superpowers)
+
+**Action**: `superpowers/finishing-a-development-branch`
+- Summarize results
+- Ask user for confirmation
+- Mark task complete
+
+---
+
+## ❌ Forbidden Actions
+
+**DO NOT** do the following:
+
+| Forbidden | Correct |
+|-----------|---------|
+| ❌ "I'll use figma-use directly" | ✅ "superpowers will dispatch mcp-server-guide" |
+| ❌ "Let me run impeccable audit" | ✅ "superpowers will dispatch impeccable for audit" |
+| ❌ "I'll generate the design with ui-ux-pro-max-skill" | ✅ "superpowers plans and dispatches ui-ux-pro-max-skill" |
+| ❌ Skip planning | ✅ Always plan first via superpowers |
+| ❌ Skip verification | ✅ Always verify via superpowers |
+
+---
+
+## 📋 Example Interactions
+
+### Example 1: Figma Design → Code
+
 ```
-1. mcp-server-guide    → 连接 Figma
-2. impeccable/init     → 初始化
-3. ui-ux-pro-max-skill → 生成设计系统
-4. mcp-server-guide    → 构建页面
-5. gsap-skills         → 添加动画
-6. impeccable/audit    → 审核质量
+User: "帮我从这个 Figma 文件生成 React 代码"
+
+superpowers/brainstorming
+  → Intent: Figma → Code
+  → Required: mcp-server-guide
+  → Plan: Extract design → Map to components → Generate code
+
+superpowers/writing-plans
+  → Sub-task 1: Connect to Figma (mcp-server-guide)
+  → Sub-task 2: Extract component info (mcp-server-guide)
+  → Sub-task 3: Generate React code (ui-ux-pro-max-skill)
+  → Sub-task 4: Audit quality (impeccable)
+
+superpowers dispatches → mcp-server-guide
+  → Extracts design tokens, components
+
+superpowers dispatches → ui-ux-pro-max-skill
+  → Generates React code with design system
+
+superpowers dispatches → impeccable
+  → Audits code quality
+
+superpowers/verification-before-completion
+  → Confirms all sub-tasks complete
+  → Presents result to user
 ```
 
-### 场景 2: 从零构建产品
-```
-1. superpowers/brainstorming → 需求探索
-2. awesome-design-md          → 选择参考
-3. superpowers/writing-plans  → 编写计划
-4. ui-ux-pro-max-skill        → 生成设计系统
-5. taste-skill                → 提升品质
-```
+### Example 2: Design Quality Review
 
-### 场景 3: 设计质量审核
 ```
-1. impeccable/critique → UX 审查
-2. impeccable/audit    → 技术检查
-3. taste-skill        → 细节提升
+User: "这个设计看起来太丑了，帮我看看"
+
+superpowers/brainstorming
+  → Intent: Design quality review
+  → Required: taste-skill + impeccable
+
+superpowers/writing-plans
+  → Sub-task 1: Analyze design (taste-skill)
+  → Sub-task 2: Run audit (impeccable)
+  → Sub-task 3: Generate improvements (taste-skill)
+
+superpowers dispatches → taste-skill
+  → Identifies design issues
+
+superpowers dispatches → impeccable
+  → Runs 41 detection rules
+  → Generates audit report
+
+superpowers dispatches → taste-skill
+  → Generates improvement suggestions
+
+superpowers/verification-before-completion
+  → Reviews all findings
+  → Presents to user
 ```
 
 ---
 
-## 📝 设计原则
+## 🛠️ Troubleshooting
 
-1. ✅ **组件优先**：搜索库 → 使用 Instance → 绑定 token
-2. ✅ **Token 绑定**：所有视觉值绑定到 Variable/Style
-3. ✅ **Design Brief**：设计前输出结构化 Brief
-4. ✅ **自动验证**：写入后验证合规性
-5. ❌ **禁止硬编码**：不使用原始颜色、字体、间距
-6. ❌ **禁止重复造轮子**：不从零构建已有组件
+### "I tried to use figma-use directly"
 
----
+**Error**: Skill not found or not authorized.
+**Fix**: Always route through superpowers. The orchestrator will dispatch mcp-server-guide.
 
-## 🔗 相关文件
+### "impeccable doesn't respond"
 
-| 文件 | 说明 |
-|------|------|
-| `AGENTS.md` | 通用 Agent 配置（Codex 等） |
-| `.claude/CLAUDE.md` | Claude Code 配置 |
-| `.codex/SKILL.md` | Codex 配置 |
-| `.cursor/.cursorrules` | Cursor 配置 |
-| `README.md` | 仓库主文档 |
-| `FIGMA-SKILLS.md` | Figma 9 skills 详解 |
+**Cause**: Direct invocation bypassed superpowers.
+**Fix**: Call superpowers first. It will manage impeccable execution.
+
+### "Multiple skills conflict"
+
+**Cause**: Concurrent direct calls.
+**Fix**: Let superpowers serialize and coordinate all skill calls.
 
 ---
 
-## 📚 参考
+## 📂 Repository
 
 - **GitHub**: https://github.com/Gleason007/Design-skills
-- **Figma MCP**: https://developers.figma.com/docs/figma-mcp-server/
-- **Skills 来源**: skills/ 目录下各子目录
+- **Install**: Run `bash install.sh` in repo root
+- **Skills Dir**: `~/.antigravity/skills/` (after install)
+- **Global Config**: `~/.antigravity/SKILL.md` (after install)
 
 ---
 
-*本配置由团队维护，如有更新请提交 PR。*
+## 📝 License
+
+MIT © Design Skills Team
