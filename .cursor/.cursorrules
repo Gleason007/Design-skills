@@ -1,0 +1,25 @@
+# Design Skills for Cursor
+
+## 自动加载
+请扫描 `skills/` 目录，加载所有子目录中的 SKILL.md。
+
+## 已安装的 Skills
+- mcp-server-guide — Figma MCP Server 官方指南
+- impeccable — 设计质量审核 (23 命令 + 41 规则)
+- ui-ux-pro-max-skill — UI/UX 设计引擎 (161 推理规则)
+- awesome-design-md — 73+ 真实网站 DESIGN.md 参考
+- gsap-skills — GSAP 动画库
+- taste-skill — 反"slop"设计提升
+- superpowers — 软件开发方法论
+
+## 设计规范
+- 优先使用设计系统组件，禁止从零构建
+- 所有视觉值绑定到 token/variable
+- 设计前输出 Design Brief 供确认
+- 使用 impeccable audit 进行质量审核
+
+## 常用命令
+- /impeccable init — 初始化项目
+- /impeccable critique — UX 审查
+- /impeccable audit — 技术质量检查
+- /impeccable polish — 最终润色
