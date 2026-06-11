@@ -6,8 +6,8 @@
 
 <p align="center">
   <a href="https://github.com/Gleason007/Design-skills/stargazers"><img src="https://img.shields.io/github/stars/Gleason007/Design-skills?style=flat-square&color=yellow" alt="Stars"></a>
-  <a href="https://github.com/Gleason007/Design-skills"><img src="https://img.shields.io/badge/skills-7-blue?style=flat-square" alt="Skills"></a>
-  <a href="https://github.com/Gleason007/Design-skills"><img src="https://img.shields.io/badge/agents-Claude%20%7C%20Codex%20%7C%20Cursor-green?style=flat-square" alt="Agents"></a>
+  <a href="https://github.comleason007/Design-skills"><img src="https://img.shields.io/badge/skills-7-blue?style=flat-square" alt="Skills"></a>
+  <a href="https://github.com/Gleason007/Design-skills"><img src="https://img.shields.io/badge/agents-Claude%20%7C%20Codex%20%7C%20Cursor%20%7C%20Antigravity-green?style=flat-square" alt="Agents"></a>
   <a href="https://github.com/Gleason007/Design-skills/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Gleason007/Design-skills?style=flat-square" alt="License"></a>
 </p>
 
@@ -17,7 +17,7 @@
 
 这个仓库是**设计团队的 AI 工具箱**。收集了 7 个经过筛选的 AI Agent Skills，覆盖从 Figma 设计到代码实现、从设计系统到动画效果的全链路。
 
-团队 Clone 后直接使用，无需逐个搜索、安装。Claude Code、Codex、Cursor 都会自动读取配置，加载所有 skills。
+团队 Clone 后直接使用，无需逐个搜索、安装。Claude Code、Codex、Cursor、Antigravity / Gemini 都会自动读取配置，加载所有 skills。
 
 ---
 
@@ -43,12 +43,24 @@ git clone https://github.com/Gleason007/Design-skills.git
 cd Design-skills
 
 # 打开你的 AI Agent（自动加载所有 skills）
-# ✅ Claude Code  → 读取 .claude/CLAUDE.md
-# ✅ Codex        → 读取 AGENTS.md + .codex/SKILL.md
-# ✅ Cursor       → 读取 .cursor/.cursorrules
+# ✅ Claude Code       → 读取 .claude/CLAUDE.md
+# ✅ Codex             → 读取 AGENTS.md + .codex/SKILL.md
+# ✅ Cursor            → 读取 .cursor/.cursorrules
+# ✅ Antigravity/Gemini → 读取 .antigravity/SKILL.md
 ```
 
 **无需额外配置，开箱即用。**
+
+---
+
+## 🤖 支持的 AI Agent
+
+| Agent | 配置文件 | 加载方式 |
+|-------|---------|---------|
+| **Claude Code** | `.claude/CLAUDE.md` | 在项目目录中打开，自动读取 |
+| **Codex** | `AGENTS.md` + `.codex/SKILL.md` | 在项目目录中打开，自动读取 |
+| **Cursor** | `.cursor/.cursorrules` | 在项目目录中打开，自动读取 |
+| **Antigravity / Gemini** | `.antigravity/SKILL.md` | 在项目目录中打开，自动读取 |
 
 ---
 
@@ -243,38 +255,38 @@ finishing-a-development-branch → 分支完成处理
 ### 场景 A: Figma 设计 → 代码
 
 ```
-1. mcp-server-guide/figma-use
+1. mcp-server-guide (figma-use)
    → 连接 Figma
    
-2. impeccable/init
+2. impeccable (init)
    → 初始化设计规范
    
 3. ui-ux-pro-max-skill
    → 生成设计系统
    
-4. mcp-server-guide/figma-code-connect
+4. mcp-server-guide (figma-code-connect)
    → 映射到代码
    
 5. gsap-skills
    → 添加动画
    
-6. impeccable/audit
+6. impeccable (audit)
    → 审核质量
    
-7. superpowers/requesting-code-review
+7. superpowers (requesting-code-review)
    → 代码审查
 ```
 
 ### 场景 B: 从零构建产品
 
 ```
-1. superpowers/brainstorming
+1. superpowers (brainstorming)
    → 需求探索
    
 2. awesome-design-md
    → 选择设计参考
    
-3. superpowers/writing-plans
+3. superpowers (writing-plans)
    → 编写计划
    
 4. ui-ux-pro-max-skill
@@ -283,17 +295,17 @@ finishing-a-development-branch → 分支完成处理
 5. taste-skill
    → 提升设计品质
    
-6. superpowers/verification-before-completion
+6. superpowers (verification-before-completion)
    → 验证交付
 ```
 
 ### 场景 C: 设计系统维护
 
 ```
-1. mcp-server-guide/figma-generate-library
+1. mcp-server-guide (figma-generate-library)
    → 更新 Figma 库
    
-2. impeccable/audit
+2. impeccable (audit)
    → 审核一致性
    
 3. taste-skill
@@ -308,17 +320,21 @@ finishing-a-development-branch → 分支完成处理
 Design-skills/
 ├── 📄 AGENTS.md                    # 通用配置（所有 Agent）
 ├── 📄 README.md                    # 本文件
+├── 📄 FIGMA-SKILLS.md              # Figma 9 个 Skills 详解
 ├──
+├── 📁 .antigravity/
+│   └── 📄 SKILL.md                 # Antigravity / Gemini 配置
+│
 ├── 📁 .claude/
-│   └── 📄 CLAUDE.md               # Claude Code 专用配置
+│   └── 📄 CLAUDE.md                # Claude Code 项目指令
 │
 ├── 📁 .codex/
-│   └── 📄 SKILL.md                # Codex 专用配置
+│   └── 📄 SKILL.md                 # Codex 配置
 │
 ├── 📁 .cursor/
-│   └── 📄 .cursorrules            # Cursor 规则
+│   └── 📄 .cursorrules             # Cursor 规则
 │
-└── 📁 skills/                       # 7 个 skills（自动加载）
+└── 📁 skills/                       # 7 个 skills
     ├── 📁 awesome-design-md/
     ├── 📁 gsap-skills/
     ├── 📁 impeccable/
@@ -326,37 +342,6 @@ Design-skills/
     ├── 📁 superpowers/
     ├── 📁 taste-skill/
     └── 📁 ui-ux-pro-max-skill/
-```
-
----
-
-## ⚙️ Agent 配置说明
-
-### Claude Code
-
-读取 `.claude/CLAUDE.md`，自动加载所有 skills。
-
-```bash
-cd Design-skills
-claude  # 自动读取配置
-```
-
-### Codex
-
-读取 `AGENTS.md` + `.codex/SKILL.md`，自动加载所有 skills。
-
-```bash
-cd Design-skills
-codex  # 自动读取配置
-```
-
-### Cursor
-
-读取 `.cursor/.cursorrules`，自动加载规则。
-
-```bash
-# 在 Cursor 中打开 Design-skills 目录
-# 自动读取 .cursorrules
 ```
 
 ---
@@ -401,60 +386,3 @@ MIT License
 <p align="center">
   <sub>Built with ❤️ for the design team</sub>
 </p>
-
----
-
-## 🤖 Antigravity / Google Gemini 配置
-
-本仓库同样支持 **Antigravity** 和 **Google Gemini CLI**。
-
-### 配置方式
-
-在 Antigravity 或 Gemini CLI 中打开仓库目录时，自动读取 `.antigravity/SKILL.md` 配置。
-
-### 已安装的 7 个 Skills
-
-| # | Skill | 🎯 核心能力 |
-|---|-------|-----------|
-| 1 | **mcp-server-guide** | Figma 官方 MCP（9 skills） |
-| 2 | **impeccable** | 设计质量审核（23 命令 + 41 规则） |
-| 3 | **ui-ux-pro-max-skill** | UI/UX 设计引擎（161 推理规则） |
-| 4 | **awesome-design-md** | 73+ 真实网站 DESIGN.md |
-| 5 | **gsap-skills** | GSAP 动画库 |
-| 6 | **taste-skill** | 反"slop"设计提升 |
-| 7 | **superpowers** | 软件开发方法论（14 skills） |
-
-### 使用方式
-
-```bash
-# 在 Antigravity / Gemini CLI 中打开仓库
-antigravity  # 或 gemini
-# 自动读取 .antigravity/SKILL.md，加载所有 skills
-```
-
-### 核心能力速查
-
-**设计质量**：
-- `impeccable init` — 初始化项目
-- `impeccable critique` — UX 审查
-- `impeccable audit` — 技术质量检查
-- `impeccable polish` — 最终润色
-
-**设计系统**：
-- `ui-ux-pro-max-skill` — 生成设计系统
-- `awesome-design-md` — 选择设计参考
-- `taste-skill` — 提升设计品质
-
-**Figma 集成**：
-- `mcp-server-guide` — Figma MCP 连接
-- `figma-code-connect` — 组件 ↔ 代码映射
-- `figma-generate-design` — 代码 → Figma
-
-**动画**：
-- `gsap-skills` — GSAP 动画
-
-**开发流程**：
-- `superpowers/brainstorming` — 需求探索
-- `superpowers/writing-plans` — 编写计划
-- `superpowers/executing-plans` — 执行计划
-
