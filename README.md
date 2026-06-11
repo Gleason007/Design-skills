@@ -401,3 +401,60 @@ MIT License
 <p align="center">
   <sub>Built with ❤️ for the design team</sub>
 </p>
+
+---
+
+## 🤖 Antigravity / Google Gemini 配置
+
+本仓库同样支持 **Antigravity** 和 **Google Gemini CLI**。
+
+### 配置方式
+
+在 Antigravity 或 Gemini CLI 中打开仓库目录时，自动读取 `.antigravity/SKILL.md` 配置。
+
+### 已安装的 7 个 Skills
+
+| # | Skill | 🎯 核心能力 |
+|---|-------|-----------|
+| 1 | **mcp-server-guide** | Figma 官方 MCP（9 skills） |
+| 2 | **impeccable** | 设计质量审核（23 命令 + 41 规则） |
+| 3 | **ui-ux-pro-max-skill** | UI/UX 设计引擎（161 推理规则） |
+| 4 | **awesome-design-md** | 73+ 真实网站 DESIGN.md |
+| 5 | **gsap-skills** | GSAP 动画库 |
+| 6 | **taste-skill** | 反"slop"设计提升 |
+| 7 | **superpowers** | 软件开发方法论（14 skills） |
+
+### 使用方式
+
+```bash
+# 在 Antigravity / Gemini CLI 中打开仓库
+antigravity  # 或 gemini
+# 自动读取 .antigravity/SKILL.md，加载所有 skills
+```
+
+### 核心能力速查
+
+**设计质量**：
+- `impeccable init` — 初始化项目
+- `impeccable critique` — UX 审查
+- `impeccable audit` — 技术质量检查
+- `impeccable polish` — 最终润色
+
+**设计系统**：
+- `ui-ux-pro-max-skill` — 生成设计系统
+- `awesome-design-md` — 选择设计参考
+- `taste-skill` — 提升设计品质
+
+**Figma 集成**：
+- `mcp-server-guide` — Figma MCP 连接
+- `figma-code-connect` — 组件 ↔ 代码映射
+- `figma-generate-design` — 代码 → Figma
+
+**动画**：
+- `gsap-skills` — GSAP 动画
+
+**开发流程**：
+- `superpowers/brainstorming` — 需求探索
+- `superpowers/writing-plans` — 编写计划
+- `superpowers/executing-plans` — 执行计划
+

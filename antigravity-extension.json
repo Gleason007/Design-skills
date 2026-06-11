@@ -1,0 +1,49 @@
+{
+  "name": "design-skills",
+  "displayName": "Design Skills",
+  "description": "一站式 AI 设计工具箱：7 个精选 skills 覆盖 Figma 集成、设计质量审核、设计系统生成、动画和开发流程",
+  "version": "1.0.0",
+  "author": "Gleason007",
+  "license": "MIT",
+  "repository": "https://github.com/Gleason007/Design-skills",
+  "homepage": "https://github.com/Gleason007/Design-skills",
+  "skills": [
+    "mcp-server-guide",
+    "impeccable",
+    "ui-ux-pro-max-skill",
+    "awesome-design-md",
+    "gsap-skills",
+    "taste-skill",
+    "superpowers"
+  ],
+  "keywords": [
+    "design",
+    "figma",
+    "ui",
+    "ux",
+    "design-system",
+    "animation",
+    "gsap",
+    "skills"
+  ],
+  "contextFileName": ".antigravity/SKILL.md",
+  "mcpServers": {
+    "figma": {
+      "httpUrl": "https://mcp.figma.com/mcp",
+      "oauth": {
+        "enabled": true
+      }
+    }
+  },
+  "permissions": [
+    "mcp",
+    "web-browsing"
+  ],
+  "compatibility": {
+    "gemini": true,
+    "antigravity": true,
+    "claude": true,
+    "codex": true,
+    "cursor": true
+  }
+}
